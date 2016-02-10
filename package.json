@@ -1,0 +1,7 @@
+{
+  "name": "nodejs-express-api",
+  "main": "serve.js",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
