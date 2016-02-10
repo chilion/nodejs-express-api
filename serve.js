@@ -16,16 +16,8 @@ api.use(bodyParser.urlencoded({
 api.use(bodyParser.json());
 
 // The routing part of our API, if extending the API it should be in it's own routing.js file.
-
-var router = express.Router();
-
-// A route to check if everything is working like it should
-router.get('/', function(req, res) {
- res.json({ message: 'Take a beer or 2, you just found me.' }); 
-});
-
-// Set all routes being prefixed by api.
-api.use('/api', router);
+var routes = require('./routes/routes.js');
+api.use('/api', routes);
 
 // And now, let the fun start; or our server of course.
 api.listen(port); 
